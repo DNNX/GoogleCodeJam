@@ -22,7 +22,7 @@ namespace DNNX.GoogleCodeJam.CandySplitting
     
         public static void Main(string[] args)
         {
-            new CandySplitting().ReadSolveWriteLoop();
+            new CandySplitting().REPL();
             Console.ReadLine();
         }    
     }

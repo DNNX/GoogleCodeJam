@@ -38,7 +38,11 @@ namespace DNNX.GoogleCodeJam.Common
         
         public abstract object Solve(TTestCase testCase);
         
-        public void ReadSolveWriteLoop()
+        /// <summary>
+        /// Read-eval-print loop
+        /// http://en.wikipedia.org/wiki/REPL
+        /// </summary>
+        public void REPL()
         {
             int numberOfTests = ReadInt();
             var tests = new TTestCase[numberOfTests];
