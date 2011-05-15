@@ -36,7 +36,7 @@ namespace DNNX.GoogleCodeJam.Common
         
         public abstract TTestCase ReadTestCase();
         
-        public abstract string Solve(TTestCase testCase);
+        public abstract object Solve(TTestCase testCase);
         
         public void ReadSolveWriteLoop()
         {
@@ -57,5 +57,15 @@ namespace DNNX.GoogleCodeJam.Common
                 _output.WriteLine("Case #{0}: {1}", i+1, answers[i]);
             }
         }
+    }
+    
+    public abstract class Solution<T1, T2> : Solution<Tuple<T1, T2>>
+    {
+        public override object Solve(Tuple<T1, T2> testCase)
+        {
+            return Solve(testCase.Item1, testCase.Item2);
+        }
+        
+        public abstract object Solve(T1 arg1, T2 arg2);
     }
 }
