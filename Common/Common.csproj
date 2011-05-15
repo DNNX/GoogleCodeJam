@@ -4,9 +4,9 @@
     <ProjectGuid>{9C256117-400B-4736-AA8C-6ADF6D746A51}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>Common</RootNamespace>
-    <AssemblyName>Common</AssemblyName>
+    <OutputType>Library</OutputType>
+    <RootNamespace>DNNX.GoogleCodeJam.Common</RootNamespace>
+    <AssemblyName>DNNX.GoogleCodeJam.Common</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <AppDesignerFolder>Properties</AppDesignerFolder>

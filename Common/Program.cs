@@ -1,14 +1,6 @@
-﻿/*
- * Created by SharpDevelop.
- * User: Admin
- * Date: 15.05.2011
- * Time: 22:16
- * 
- * To change this template use Tools | Options | Coding | Edit Standard Headers.
- */
-using System;
+﻿using System;
 
-namespace Common
+namespace DNNX.GoogleCodeJam.Common
 {
     class Program
     {
