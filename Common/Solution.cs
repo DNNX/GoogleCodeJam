@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Linq;
 
 namespace DNNX.GoogleCodeJam.Common
@@ -8,6 +9,10 @@ namespace DNNX.GoogleCodeJam.Common
         private readonly TextReader _input;
         private readonly TextWriter _output;
         
+        protected Solution() : this(Console.In, Console.Out)
+        {
+        }
+
         protected Solution(TextReader input, TextWriter output)
         {
             _input = input;
