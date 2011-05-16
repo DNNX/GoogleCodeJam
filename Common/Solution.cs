@@ -21,17 +21,17 @@ namespace DNNX.GoogleCodeJam.Common
         
         protected string ReadString()
         {
-            return _input.ReadLine();
+            return _input.ReadLine().Trim();
         }
         
         protected int ReadInt()
         {
-            return int.Parse(_input.ReadLine());
+            return int.Parse(ReadString());
         }
 
         protected int[] ReadInts()
         {
-            return _input.ReadLine().Split(' ').Select(int.Parse).ToArray();
+            return ReadString().Split(' ').Select(int.Parse).ToArray();
         }
         
         public abstract TTestCase ReadTestCase();
