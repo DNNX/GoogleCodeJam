@@ -1,47 +1,40 @@
 ﻿using System;
 using System.IO;
 using NUnit.Framework;
+using DNNX.GoogleCodeJam.Common;
 
 namespace DNNX.GoogleCodeJam.CandySplitting.Test
 {
     [TestFixture]
-    public class CandySplittingTest
+    public class CandySplittingTest : BaseTest<int[]>
     {
-        private CandySplitting _solution;
-        
-        [TestFixtureSetUp]
-        public void Init()
-        {
-            _solution = new CandySplitting();
-            
-        }
-
         [Test]
         public void SmokeTest()
         {
-            var input = new StringReader(@"
+            var input = @"
 2
  5
  1 2 3 4 5
  3
- 3 5 6
-".Trim());
-            var output = new StringWriter();
-            var solution = new CandySplitting(input, output);
+ 3 5 6";
             
-            solution.REPL();
-           
-            var expected = @"
+            var expectedOutput = @"
 Case #1: NO
-Case #2: 11".Trim();
-            Assert.AreEqual(expected, output.ToString().Trim());
+Case #2: 11";
+
+            SmokeTest(input, expectedOutput);
         }
         
         [Test]
         public void EdgeCase()
         {
-            Assert.AreEqual("NO", _solution.Solve(new[] {1}));
+            Assert.AreEqual("NO", CreateSolution().Solve(new[] {1}));
         }
         
+        
+        protected override Solution<int[]> CreateSolution(TextReader input, TextWriter output)
+        {
+            return new CandySplitting(input, output);
+        }
     }
 }

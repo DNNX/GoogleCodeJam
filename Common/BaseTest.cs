@@ -13,7 +13,7 @@ namespace DNNX.GoogleCodeJam.Common
             return CreateSolution(null, null);
         }
         
-        public void SmokeTest(string input, string expectedOutput)
+        protected void SmokeTest(string input, string expectedOutput)
         {
             var inputReader = new StringReader(input.Trim());
             var outputWriter = new StringWriter();
